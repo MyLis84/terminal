@@ -1,0 +1,5 @@
+name: Mariana,
+surname: Silanteva,
+age:38,
+pets: 2,
+salary: 1000 USD
