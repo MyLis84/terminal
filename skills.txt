@@ -1,8 +1,0 @@
-Skills:
-Postman,
-Git,
-SQL,
-Client-server architecture,
-Terminal Linux,
-Devtools,
-JavaScript,
