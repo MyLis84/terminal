@@ -1,5 +1,0 @@
-movie: Forrest Gump,
-series: The X Files,
-meal: pizza,
-season: summer,
-country: Peru
