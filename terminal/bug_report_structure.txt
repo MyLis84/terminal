@@ -1,0 +1,14 @@
+1) ID number
+2) Application
+3) Module being tested
+4) Version number
+5) Summary/Short description
+6) Steps to reproduce
+7) Severity
+8) Priority
+9) Environment
+10) Reporter
+11) Assigned to
+12) Status
+13) Attachments
+
