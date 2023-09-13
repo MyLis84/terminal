@@ -1,0 +1,120 @@
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я: pwd
+
+2) Создать папку: mkdir group_32
+3) Зайти в папку: cd group_32
+4) Создать 3 папки: mkdir QA_3 QA_4 QA_5
+5) Зайти в любую папку: cd QA_4
+6) Создать 5 файлов (3 txt, 2 json):  touch day_1.txt day_2.txt day_3.txt Cities.json Holidays.json -
+Создаем пустые файлы
+
+7) Создать 3 папки:   mkdir QA_6 QA_7 QA_8
+
+8) Вывести список содержимого папки: ls -la
+
+9) + Открыть любой txt файл:  cat QA_4/week1.txt
+10) + написать туда что-нибудь, любой текст: 
+cat >day_1.txt
+1) Helen
+2) Olga
+3) Anna
+4) Marta
+5) Viktoria
+6) Olesia
+7) Sasha       
+Выйти из режима редактирования CTRL+C
+11) + сохранить и выйти: Выйти из режима редактирования CTRL+C
+12) Выйти из папки на уровень выше: cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку: mv QA_4/day_1.txt QA_4/day_2.txt QA_3
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку: 
+cp QA_4/Cities.json QA_4/Holidays.json QA_5
+
+15) Найти файл по имени: find QA_3 -name 'day_1.txt'
+ 
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает:
+ tail -f ./QA_3/day_1.txt
+Результат
+1) Helen
+2) Olga
+3) Anna
+4) Marta
+5) Viktoria
+6) Olesia
+7) Sasha
+
+Посмотреть содержимое в реальном времени с grep, grep - ищет информацию  в файле:
+ tail -f ./QA_3/day_1.txt | grep "Anna"
+Результат:  3) Anna
+
+ grep -i -r "language" ./*
+
+Результат 
+./QA_4/Cities.json:               "language": "English"
+./QA_4/Cities.json:             "language": "English"
+./QA_4/Cities.json:             "language": "English"
+Где -i - не учитывать регистр, .- в текущей папке, * - во всех файлах.
+grep -i -r "country"
+
+Результат
+
+QA_4/Cities.json:               "country": "United States"
+QA_4/Cities.json:               "country": "United States"
+QA_4/Cities.json:               "country": "United States"
+QA_4/Holidays.json:             "country": "United States"
+QA_4/Holidays.json:             "country": "United States"
+QA_4/Holidays.json:             "country": "Mexica"
+
+
+17) вывести несколько первых строк из текстового файла:
+     head QA_3/day_1.txt (выведет первые 10 строк)
+     head -n 6 QA_4/Holidays.json (где - n количество первых строк): выведет только 6 первых строк
+
+18) вывести несколько последних строк из текстового файла:
+tail -n 3 QA_3/day_1.txt
+     
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает:
+      less QA_4/Holidays.json 
+    Выйти обратно в терминал q
+
+20) вывести дату и время:   date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+curl http://162.55.220.72:5006/terminal-hw-request
+curl 'http://162.55.220.72:5006/get_method?name=Maryana&age=38'
+Результат [
+  "Maryana", 
+  "38"
+]
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+
+
+
+
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
+
+
+
+
+
+#!/bin/bash
+cd group_32/
+mkdir QA_3 QA_4 QA_5
+cd QA_4/
+touch day_1.txt day_2.txt day_3.txt Cities.json Holidays.json
+mkdir QA_6 QA_7 QA_8
+ls -la
+cd ..
+mv QA_4/day_1.txt QA_4/day_2.txt QA_3
